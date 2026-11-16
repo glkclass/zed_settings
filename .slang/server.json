@@ -1,0 +1,5 @@
+{
+  // "index": [{"dirs": ["bitstream-mipi-usb/rtl/core", "cu_dut_tb/sim/tb/dut_tb"]}],
+  // "incdirs": ["${UVM_HOME}/src"]
+  "flags": "-Iuvm-1.2/src -Idutb/src -Ibitstream-mipi-usb/rtl/common -Wno-unused-wildcard-import"
+}

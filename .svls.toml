@@ -1,0 +1,11 @@
+[option]
+linter = true
+
+[verilog]
+include_paths = [
+  "uvm-1.2/src",
+  "dutb/src",
+  "cu_dut_tb/sim/tb/dut_tb",
+  "bitstream-mipi-usb/rtl/core",
+  "bitstream-mipi-usb/rtl/common"
+]

@@ -1,0 +1,5 @@
+# Project Verilog/SystemVerilog lint rules.
+line-length=length:100
+truncated-numeric-literal
+macro-name-style
+parameter-name-style=parameter_style:ALL_CAPS;localparam_style:ALL_CAPS

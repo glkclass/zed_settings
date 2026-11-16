@@ -1,0 +1,149 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+//
+// Example:
+[
+  {
+    "label": "Python: Run Active File",
+    "command": "python",
+    "args": ["$ZED_FILE"],
+    "env": {
+      "PYTHONPATH": "$ZED_WORKTREE_ROOT/algo/cu_algo_lib"
+    },
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+
+  {
+    "label": "CU: compile rtl",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "export RTL_FILE_TO_COMPILE=$ZED_FILE ; ./make_color.sh compile_rtl",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "CU: dtb_build",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "./make_color.sh dtb_build",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "CU: dtb_elab",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "./make_color.sh dtb_elab",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "CU: dtb_run",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "./make_color.sh dtb_run",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+
+  {
+    "label": "CU: generate_impl_artefacts",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make generate_impl_artefacts",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "CU: clean log",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make clean_log",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "Create Vivado project",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make create_vivado_project",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "Update Vivado project",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make update_vivado_project",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "Build SOC",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make build_release_soc",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "Build SW & Load elf",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make build_sw_load_elf",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "Build SW & Program flash",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make build_sw_gen_hw_bin_program_flash",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+  {
+    "label": "Make Clean log",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make clean_log",
+  },
+
+  {
+    "label": "Make Debug",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make debug",
+  },
+
+  {
+    "label": "Build MC",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "make sw_build_app_ninja",
+  },
+
+  {
+    "label": "Run sh",
+    "cwd": "$ZED_WORKTREE_ROOT/bitstream-mipi-usb/scripts",
+    "command": "source print.sh",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+  },
+
+
+  // {
+  //   "label": "Verilator: lint active file",
+  //   "command": "verilator",
+  //   "args": [
+  //     "--lint-only",
+  //     "-Wall",
+  //     "--Wno-fatal",
+  //     "--language",
+  //     "1800-2012",
+  //     "-I$ZED_WORKTREE_ROOT/bitstream-mipi-usb/mc/src",
+  //     "-I$ZED_DIRNAME/../common",
+  //     "$ZED_FILE"
+  //   ],
+  //   "cwd": "$ZED_DIRNAME",
+  //   "use_new_terminal": false,
+  //   "allow_concurrent_runs": false
+  // }
+]

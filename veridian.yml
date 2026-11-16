@@ -1,0 +1,23 @@
+# Veridian project configuration.
+include_dirs:
+  - bitstream-mipi-usb/rtl/core
+  - bitstream-mipi-usb/rtl/common
+  - uvm-1.2/src
+  - dutb/src
+  - cu_dut_tb/sim/tb/dut_tb
+
+verilator:
+  syntax:
+    enabled: true
+    path: verilator
+    args:
+      - --lint-only
+      - --uvm
+      - --sv
+      - -Wall
+      - -Ibitstream-mipi-usb/rtl/core
+      - -Ibitstream-mipi-usb/rtl/common
+      - -Ibitstream-mipi-usb/rtl/ip/bram_16K_18_18/sim
+      - -Idutb/src
+      - -Iuvm-1.2/src
+      - -Icu_dut_tb/sim/tb/dut_tb
